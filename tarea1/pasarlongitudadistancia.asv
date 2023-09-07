@@ -1,0 +1,30 @@
+Para convertir un vector de longitud en grados a una distancia en metros, 
+puedes utilizar la fórmula del círculo máximo para calcular la distancia 
+entre dos puntos en la superficie terrestre. Esta fórmula tiene en cuenta 
+el radio de la Tierra y la diferencia en la longitud entre los dos puntos.
+
+Aquí hay un ejemplo de cómo convertir un vector de longitud en grados a 
+una distancia en metros utilizando la fórmula del círculo máximo en MATLAB:
+
+
+% Vector de longitud en grados
+lon1 = -119.8759:0.25:-70.125;
+
+% Radio de la Tierra en metros
+R = 6371e3; % Aproximadamente 6,371 kilómetros o 6,371,000 metros
+
+% Convertir longitud en distancia en metros
+lon1_rad = deg2rad(lon1);
+distancia = R * lon1_rad;
+
+% Resultado en metros
+disp(distancia);
+
+
+-----
+En este ejemplo, se utiliza el radio medio de la Tierra 
+(aproximadamente 6,371 kilómetros) para convertir la diferencia en 
+longitud entre cada punto del vector lon1 en una distancia correspondiente 
+en metros.
+
+
